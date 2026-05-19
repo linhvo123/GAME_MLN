@@ -8,7 +8,7 @@
 const CONFIG = {
   maxLives:     3,       // số mạng ban đầu
   totalStages:  10,      // số ải (lấy đúng số này từ QUESTIONS)
-  delayCorrect: 1200,    // ms tự động qua ải khi trả lời đúng (0 = tắt)
+  delayCorrect: 0,       // ms tự động qua ải khi trả lời đúng (0 = tắt)
 };
 // ────────────────────────────────────────────────────────────
 

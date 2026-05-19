@@ -13,98 +13,93 @@
 
 const QUESTIONS = [
   {
-    guardian: "🧙‍♂️",
-    name: "Pháp sư cổ đại",
-    q: "Thủ đô của Việt Nam là thành phố nào?",
-    opts: ["Hà Nội", "TP. Hồ Chí Minh", "Đà Nẵng", "Huế"],
-    ans: 0,
-    explain:
-      "Hà Nội là thủ đô của Việt Nam từ năm 1945, là trung tâm chính trị và văn hóa của cả nước.",
-  },
-  {
-    guardian: "🐉",
-    name: "Rồng lửa",
-    q: "Trái Đất cách Mặt Trời khoảng bao nhiêu km?",
-    opts: ["15 triệu km", "150 triệu km", "1,5 tỷ km", "15 tỷ km"],
+    guardian: "📘",
+    name: "Ngọn bút đỏ",
+    q: "Ai là tác giả của bộ sách 'Tư bản luận'?",
+    opts: ["Freud", "Marx", "Lenin", "Engels"],
     ans: 1,
     explain:
-      "Khoảng cách trung bình Trái Đất – Mặt Trời là 150 triệu km, còn gọi là 1 đơn vị thiên văn (AU).",
+      "Karl Marx là tác giả của 'Tư bản luận', tác phẩm nền tảng của chủ nghĩa xã hội khoa học.",
   },
   {
-    guardian: "🧟",
-    name: "Zombie tiến sĩ",
-    q: "Ai là tác giả của tác phẩm 'Truyện Kiều'?",
-    opts: ["Hồ Xuân Hương", "Nguyễn Du", "Nguyễn Trãi", "Lê Quý Đôn"],
-    ans: 1,
-    explain:
-      "Nguyễn Du (1765–1820) là đại thi hào dân tộc, tác giả Truyện Kiều — kiệt tác văn học chữ Nôm.",
-  },
-  {
-    guardian: "🦁",
-    name: "Sư tử thần",
-    q: "Nước nào đông dân nhất thế giới hiện nay?",
-    opts: ["Trung Quốc", "Hoa Kỳ", "Ấn Độ", "Indonesia"],
+    guardian: "🧨",
+    name: "Làn gió cách mạng",
+    q: "Ai là lãnh tụ chủ chốt của Cách mạng Tháng Mười Nga 1917?",
+    opts: ["Stalin", "Trotsky", "Lenin", "Bukharin"],
     ans: 2,
     explain:
-      "Ấn Độ vượt qua Trung Quốc vào năm 2023 để trở thành quốc gia đông dân nhất thế giới.",
+      "Vladimir Lenin lãnh đạo Đảng Bolshevik, dẫn đến thành công của Cách mạng Tháng Mười năm 1917.",
   },
   {
-    guardian: "🤖",
-    name: "Robot bảo vệ",
-    q: "Ngôn ngữ lập trình nào chạy trực tiếp trên mọi trình duyệt web?",
-    opts: ["Python", "Java", "JavaScript", "C++"],
+    guardian: "⚒️",
+    name: "Búa liềm",
+    q: "Khẩu hiệu nào sau đây là biểu tượng của phong trào vô sản?",
+    opts: ["Tự do, bình đẳng, bác ái", "Nước nào cũng có chủ quyền", "Vô sản toàn thế giới, đoàn kết lại", "Nông dân làm chủ ruộng đất"],
     ans: 2,
     explain:
-      "JavaScript là ngôn ngữ duy nhất chạy native trên trình duyệt, là trái tim của web hiện đại.",
+      "'Vô sản toàn thế giới, đoàn kết lại!' là khẩu hiệu quốc tế của phong trào công nhân và chủ nghĩa Mác.",
   },
   {
-    guardian: "🐺",
-    name: "Sói bạch tuyết",
-    q: "1 năm có bao nhiêu giây?",
-    opts: [
-      "31.536.000 giây",
-      "8.760.000 giây",
-      "86.400 giây",
-      "3.153.600 giây",
-    ],
+    guardian: "🎓",
+    name: "Người học giả",
+    q: "Khái niệm nào sau đây là trung tâm của lý luận Mác?",
+    opts: ["Nền dân chủ tư sản", "Bầu cử phổ thông", "Giai cấp và đấu tranh giai cấp", "Lý tưởng cá nhân"],
+    ans: 2,
+    explain:
+      "Marx coi đấu tranh giai cấp là động lực cơ bản của lịch sử và cách mạng xã hội.",
+  },
+  {
+    guardian: "🌾",
+    name: "Nông dân đỏ",
+    q: "Trong kinh tế chính trị Mác-Lênin, 'vô sản' là gì?",
+    opts: ["Giai cấp tư sản", "Nhóm chủ đất", "Công nhân không sở hữu tư liệu sản xuất", "Giới trí thức"],
+    ans: 2,
+    explain:
+      "Vô sản là tầng lớp công nhân chỉ có sức lao động để bán và không sở hữu tư liệu sản xuất.",
+  },
+  {
+    guardian: "📜",
+    name: "Tài liệu lịch sử",
+    q: "Tác phẩm nào của Lenin bàn về nhà nước và cách mạng?",
+    opts: ["Nhà nước và cách mạng", "Chính trị và văn hóa", "Tư tưởng phê phán", "Lịch sử đảng Bolshevik"],
     ans: 0,
     explain:
-      "1 năm = 365 ngày × 24h × 3600s = 31.536.000 giây. Nhiều hơn bạn nghĩ phải không? 😄",
+      "'Nhà nước và cách mạng' là tác phẩm trọng yếu của Lenin về chức năng nhà nước trong xã hội chuyển tiếp.",
   },
   {
-    guardian: "🧌",
-    name: "Troll núi lửa",
-    q: "Hành tinh nào lớn nhất trong Hệ Mặt Trời?",
-    opts: ["Sao Thổ", "Sao Hỏa", "Sao Hải Vương", "Sao Mộc"],
-    ans: 3,
-    explain:
-      "Sao Mộc (Jupiter) là hành tinh lớn nhất, thể tích bằng khoảng 1.321 lần Trái Đất.",
-  },
-  {
-    guardian: "🦅",
-    name: "Đại bàng thần",
-    q: "Công thức hóa học của nước là gì?",
-    opts: ["CO₂", "NaCl", "O₂", "H₂O"],
-    ans: 3,
-    explain:
-      "Nước có công thức H₂O — 2 nguyên tử Hydro kết hợp với 1 nguyên tử Oxy.",
-  },
-  {
-    guardian: "🧛",
-    name: "Bá tước hút máu",
-    q: "Bộ truyện 'Harry Potter' gồm bao nhiêu tập?",
-    opts: ["5 tập", "6 tập", "7 tập", "8 tập"],
+    guardian: "⚖️",
+    name: "Cán cân đỏ",
+    q: "Theo Marx, ai là người tạo ra giá trị thặng dư trong sản xuất tư bản?",
+    opts: ["Nông dân", "Tư sản", "Vô sản", "Tiểu chủ"],
     ans: 2,
     explain:
-      "Bộ Harry Potter của J.K. Rowling gồm 7 cuốn tiểu thuyết, xuất bản từ 1997 đến 2007.",
+      "Marx chỉ rõ giá trị thặng dư được tạo ra bởi lao động của tầng lớp vô sản trong hệ thống tư bản.",
   },
   {
-    guardian: "👾",
-    name: "Vua quái vật cuối",
-    q: "Cái gì có thể đi qua cửa kính mà không cần mở?",
-    opts: ["Gió", "Nước", "Âm thanh", "Ánh sáng"],
+    guardian: "🔥",
+    name: "Ngọn lửa đấu tranh",
+    q: "Tư tưởng Mác-Lênin coi 'Cách mạng vô sản' nhằm mục đích gì?",
+    opts: ["Bảo vệ tư sản", "Duy trì chế độ phong kiến", "Thống nhất các nước tư bản", "Xóa bỏ tư hữu tư liệu sản xuất"],
     ans: 3,
     explain:
-      "Ánh sáng xuyên qua kính mà không cần mở cửa — câu đố kinh điển! 😄 Chúc mừng, bạn đã thắng!",
+      "Cách mạng vô sản hướng tới xóa bỏ chế độ tư hữu tư liệu sản xuất và thiết lập chế độ xã hội chủ nghĩa.",
+  },
+  {
+    guardian: "🕊️",
+    name: "Hòa bình đỏ",
+    q: "Trong lý luận Mác-Lênin, nhà nước chuyên chính vô sản dùng để làm gì?",
+    opts: ["Bảo vệ chế độ tư sản", "Dập tắt mọi phong trào", "Bảo đảm chuyển tiếp sang xã hội không giai cấp", "Thực hiện chủ nghĩa cá nhân"],
+    ans: 2,
+    explain:
+      "Nhà nước chuyên chính vô sản là công cụ để bảo đảm quá độ từ xã hội công nghiệp đến xã hội xã hội chủ nghĩa và chủ nghĩa cộng sản.",
+  },
+  {
+    guardian: "🏆",
+    name: "Cờ chiến thắng",
+    q: "Ai là người cùng Marx viết Tuyên ngôn Đảng Cộng sản?",
+    opts: ["Lenin", "Engels", "Proudhon", "Bakunin"],
+    ans: 1,
+    explain:
+      "Friedrich Engels cùng Marx là đồng tác giả của Tuyên ngôn Đảng Cộng sản xuất bản năm 1848.",
   },
 ];
